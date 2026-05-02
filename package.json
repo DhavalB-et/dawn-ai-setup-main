@@ -1,0 +1,40 @@
+{
+  "name": "dawn-ai-setup-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i css/application.css -o assets/application.css.liquid -w -m",
+    "format": "prettier --write snippets/ templates/ sections/ layout/ config/ assets/",
+    "lint": "eslint . --ext .js",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.{js,jsx,ts,tsx,css,md,liquid}": "prettier --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DhavalB-et/dawn-ai-setup-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DhavalB-et/dawn-ai-setup-main/issues"
+  },
+  "homepage": "https://github.com/DhavalB-et/dawn-ai-setup-main#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@shopify/prettier-plugin-liquid": "^1.10.2",
+    "eslint": "^10.3.0",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3"
+  }
+}
